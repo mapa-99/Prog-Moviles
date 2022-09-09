@@ -1,25 +1,24 @@
-import javax.swing.JOptionPane;
-
 public class main {
 
-	public static void main(String[] args) {
-		String op = "";
-		do {
-			op = JOptionPane.showInputDialog(
-					"Bienvenido, Menú de inicio\n 1. Conectar Base de Datos\n 2. Consultar Base de Datos\n 3. Insertar valor en Base de Datos\n 4. Eliminar valor en Base de Datos");
+  public static void main(String[] args) {
+    Mongo miBaseMongo = new Mongo();
+    Postgres miBasePostgres = new Postgres();
+    Oracle miBaseOracle = new Oracle();
 
-			if (op.equals("1")) {
-				JOptionPane.showMessageDialog(null, "Hola.");
-			} else if (op.equals("2")) {
-				JOptionPane.showMessageDialog(null, "Como estas?.");
-			} else if (op.equals("3")) {
-				JOptionPane.showMessageDialog(null, "Adios.");
-			} else if (op.equals("4")) {
-				System.exit(0);
-			} else {
-				JOptionPane.showMessageDialog(null, "Ingrese una opcion valida");
-			}
-		} while (!op.equals("d"));
-	}
-
+    miBaseMongo.conectar();
+    miBaseMongo.consultar();
+    miBaseMongo.insertar();
+    miBaseMongo.eliminar();
+    System.out.println("<--------------------------->");
+    miBasePostgres.conectar();
+    miBasePostgres.consultar();
+    miBasePostgres.insertar();
+    miBasePostgres.eliminar();
+    System.out.println("<--------------------------->");
+    miBaseOracle.conectar();
+    miBaseOracle.consultar();
+    miBaseOracle.insertar();
+    miBaseOracle.eliminar();
+    System.out.println("<--------------------------->");
+  }
 }
