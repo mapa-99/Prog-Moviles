@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Taller-Login-Manuel-Paredes</string>
+    <string name="login_title">Welcome,\n please login!</string>
+    <string name="email_input">Your Email</string>
+    <string name="password_input">Your Password</string>
+    <string name="button_login">login</string>
+
+</resources>
