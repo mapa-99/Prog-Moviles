@@ -25,11 +25,11 @@ public class Empleado {
         this.id = id;
     }
 
-    public String getUser() {
+    public String getNombre() {
         return nombre;
     }
 
-    public void setUser(String user) {
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
