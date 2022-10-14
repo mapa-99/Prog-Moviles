@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "Taller_Menu_Desplegable",
+    "slug": "Taller_Menu_Desplegable",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "Taller_Menu_Desplegable"
+}
