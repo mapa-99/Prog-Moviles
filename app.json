@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "10_menu_iconos",
+    "slug": "10_menu_iconos",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "10_menu_iconos"
+}
