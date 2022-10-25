@@ -1,12 +1,12 @@
 import {View, Text} from 'react-native';
 import React from 'react';
 
-const HomeScreen = () => {
+const ProfileScreen = () => {
   return (
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>This is the Home Screen :)!</Text>
+      <Text>This is the Profile Screen :) !</Text>
     </View>
   );
 };
 
-export default HomeScreen;
+export default ProfileScreen;
