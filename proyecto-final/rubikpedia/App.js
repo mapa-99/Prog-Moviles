@@ -6,7 +6,7 @@ import HomeScreen from './src/Pages/HomeScreen';
 import ProfileScreen from './src/Pages/ProfileScreen';
 import ImportantPartsScreen from './src/Pages/ImportantPartsScreen';
 import NotationScreen from './src/Pages/NotationScreen';
-import {Icon} from 'react-native-vector-icons/FontAwesome5';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 const Tab = createBottomTabNavigator();
 const App = () => {
   return (
@@ -16,16 +16,14 @@ const App = () => {
           tabBarIcon: ({color, size}) => {
             let iconName;
             if (route.name === 'Inicio') {
-              iconName = 'square';
+              iconName = 'cube';
             } else if (route.name === 'Partes') {
               iconName = 'shapes';
             } else if (route.name === 'Perfil') {
-              iconName = 'home-user';
+              iconName = 'house-user';
             } else if (route.name === 'Notación') {
               iconName = 'pencil-alt';
             }
-
-            // You can return any component that you like here!
             return <Icon name={iconName} size={size} color={color} />;
           },
           tabBarActiveTintColor: 'tomato',
@@ -35,7 +33,6 @@ const App = () => {
         <Tab.Screen name="Partes" component={ImportantPartsScreen} />
         <Tab.Screen name="Inicio" component={HomeScreen} />
         <Tab.Screen name="Notación" component={NotationScreen} />
-        {/* <Tab.Screen name="Logout" /> */}
       </Tab.Navigator>
     </NavigationContainer>
   );
