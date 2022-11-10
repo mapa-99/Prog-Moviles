@@ -5,7 +5,11 @@ import {partes} from '../partes';
 const ImportantPartsScreen = () => {
   return (
     <View style={{justifyContent: 'center', alignItems: 'center'}}>
-      <Text>Partes importantes de un cubo de Rubik</Text>
+      <Text style={{fontSize: 15, margin: 18}}>
+        Para resolver el cubo, tenemos que conocerlo. Para empezar, se le dará
+        un vistazo a las diferentes piezas. El cubo cuenta con 26 piezas de 3
+        tipos distintos
+      </Text>
       {partes.map(part => (
         <PartsCard
           title={part.title}
