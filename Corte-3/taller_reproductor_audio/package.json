@@ -13,7 +13,7 @@
     "@react-native-community/slider": "^4.3.3",
     "react": "18.1.0",
     "react-native": "0.70.6",
-    "react-native-track-player": "^3.2.0-17856ee72108823befd4bb7289a35a05b904a3e6",
+    "react-native-sound": "^0.11.2",
     "react-native-vector-icons": "^9.2.0"
   },
   "devDependencies": {

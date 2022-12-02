@@ -13,8 +13,8 @@ import java.util.ArrayList;
 
 // @react-native-community/slider
 import com.reactnativecommunity.slider.ReactSliderPackage;
-// react-native-track-player
-import com.doublesymmetry.trackplayer.TrackPlayer;
+// react-native-sound
+import com.zmxv.RNSound.RNSoundPackage;
 // react-native-vector-icons
 import com.oblador.vectoricons.VectorIconsPackage;
 
@@ -63,7 +63,7 @@ public class PackageList {
     return new ArrayList<>(Arrays.<ReactPackage>asList(
       new MainReactPackage(mConfig),
       new ReactSliderPackage(),
-      new TrackPlayer(),
+      new RNSoundPackage(),
       new VectorIconsPackage()
     ));
   }

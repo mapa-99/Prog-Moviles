@@ -12,43 +12,27 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import image from '../../assets/imgs/cover.jpg';
 import Slider from '@react-native-community/slider';
 import track from '../../assets/songs/track.mp3';
-import TrackPlayer, {
-  Capability,
-  Event,
-  RepeatMode,
-  State,
-  usePlaybackState,
-  useProgress,
-  useTrackPlayerEvents,
-} from 'react-native-track-player';
+
+import Sound from 'react-native-sound';
 const {width, height} = Dimensions.get('window');
 
-const setUpPlayer = async () => {
-  try {
-    await TrackPlayer.setupPlayer();
-    await TrackPlayer.add(track);
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-const togglePayBack = async playBackState => {
-  const current = await TrackPlayer.getCurrentTrack();
-  if (current != null) {
-    if (playBackState == State.Paused) {
-      await TrackPlayer.play();
-    } else {
-      await TrackPlayer.pause();
-    }
-  }
-};
-
 const MusicPlayer = () => {
-  const playBackState = usePlaybackState();
+  Sound.setCategory('Playback');
+  var ding = new Sound(track, Sound.MAIN_BUNDLE, error => {
+    if (error) {
+      console.log('failed to load the sound', error);
+      return;
+    }
 
-  useEffect(() => {
-    setUpPlayer();
-  }, []);
+    // when loaded successfully
+    console.log(
+      'duration in seconds: ' +
+        whoosh.getDuration() +
+        'number of channels: ' +
+        whoosh.getNumberOfChannels(),
+    );
+  });
+  useEffect(() => {}, []);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -81,13 +65,10 @@ const MusicPlayer = () => {
           <TouchableOpacity onPress={() => {}}>
             <Ionicons name="play-skip-back-outline" size={35} color="#ffd369" />
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => togglePayBack(playBackState)}>
+          <TouchableOpacity
+            onPress={() => (ding.isPlaying() ? ding.pause() : ding.play())}>
             <Ionicons
-              name={
-                playBackState === State.Playing
-                  ? 'ios-play-circle'
-                  : 'ios-pause-circle'
-              }
+              name={ding.isPlaying() ? 'ios-pause-circle' : 'ios-play-circle'}
               size={75}
               color="#ffd369"
             />

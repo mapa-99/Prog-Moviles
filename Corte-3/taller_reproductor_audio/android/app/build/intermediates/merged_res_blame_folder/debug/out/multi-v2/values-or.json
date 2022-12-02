@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.taller_reproductor_audio.app-mergeDebugResources-29:/values-or/values-or.xml",
+            "outputFile": "com.taller_reproductor_audio.app-mergeDebugResources-20:/values-or/values-or.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\mapa9\\.gradle\\caches\\transforms-3\\0442dcddf7c8962f91c947e4fa892631\\transformed\\core-1.9.0\\res\\values-or\\values-or.xml",
+                    "source": "C:\\Users\\mapa9\\.gradle\\caches\\transforms-3\\63a3df243d2d102452600006144a86df\\transformed\\core-1.7.0\\res\\values-or\\values-or.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
